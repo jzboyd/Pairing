@@ -6,3 +6,7 @@ const podcastSchema = new mongoose.Schema({
   category: String,
   description: String
 })
+
+const Podcast = mongoose.model('Podcast', podcastSchema)
+
+module.exports = Animal
