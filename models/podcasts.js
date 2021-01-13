@@ -4,5 +4,5 @@ const podcastSchema = new mongoose.Schema({
   name: String,
   image: String,
   category: String,
-  favorite
+  description: String
 })
