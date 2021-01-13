@@ -1,7 +1,7 @@
 # Pairing
 
 
-Joel's notes:
+Joel's notes: 
 
 
 
