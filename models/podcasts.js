@@ -4,7 +4,7 @@ const podcastSchema = new mongoose.Schema({
   name: String,
   image: String,
   category: String,
-  description: String
+  description: String,
 })
 
 const Podcast = mongoose.model('Podcast', podcastSchema)
