@@ -1,5 +1,5 @@
 const express = require('express');
-const podcasts =express.Router();
+const podcasts = express.Router();
 
 const Podcast = require('../models/podcasts.js');
 
@@ -28,7 +28,7 @@ podcasts.put('/:id', (req, res) => {
 });
 
 podcast.delete('/:id', (req, res) => {
-  
+
 })
 
 module.exports = podcasts
