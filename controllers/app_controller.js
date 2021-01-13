@@ -4,13 +4,15 @@ const podcasts = express.Router();
 const Podcast = require('../models/podcasts.js');
 
 podcasts.get('/', (req, res) => {
-  res.send('first route')
+  Podcast.find({}, (err, foundPodcast) => {
+    res.json(foundPodcast)
+  })
 });
 
 podcasts.post('/', (req, res) => {
   Podcast.create(req.body, (error, createdPodcast) => {
-    Podcast.find({}, (err, foundPocast) => {
-      res.json(foundPocast)
+    Podcast.find({}, (err, foundPodcast) => {
+      res.json(foundPodcast)
     })
   })
 });
@@ -20,15 +22,20 @@ podcasts.put('/:id', (req, res) => {
     if (err) {
       res.send(err)
     } else {
-      Podcast.find({}, (err, foundPocast) => {
-        res.json(foundPocast)
+      Podcast.find({}, (err, foundPodcast) => {
+        res.json(foundPodcast)
       })
     }
   })
 });
 
-podcast.delete('/:id', (req, res) => {
-
+podcasts.delete('/:id', (req, res) => {
+  Podcast.findByIdAndRemove(req.params.id, (err, deletePodcast) => {
+    Podcast.find({}, (err, foundPodcast) => {
+      res.json(foundPodcast)
+    })  
+  })
 })
+
 
 module.exports = podcasts

@@ -9,4 +9,4 @@ const podcastSchema = new mongoose.Schema({
 
 const Podcast = mongoose.model('Podcast', podcastSchema)
 
-module.exports = Animal
+module.exports = Podcast
