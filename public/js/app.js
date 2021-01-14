@@ -86,6 +86,14 @@ class App extends React.Component {
         return(
           <li>
           {podcast.name}
+          <br />
+
+          {podcast.category}
+          <br />
+
+          {podcast.description}
+          <br />
+
           <img src={podcast.image} alt={podcast.name} />
           <button value={podcast._id} onClick={this.deletePodcast}>DELETE</button>
           <details>
