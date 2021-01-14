@@ -13,10 +13,8 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //CONTROLLER
-
 const podcastController = require('./controllers/app_controller.js')
 app.use('/podcasts', podcastController)
-
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
