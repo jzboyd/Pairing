@@ -13,7 +13,8 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //CONTROLLER
-
+const podcastController = require('./controllers/app_controller.js')
+app.use('/podcasts', podcastController)
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
@@ -25,7 +26,7 @@ mongoose.connect(MONGODB_URI, {
 mongoose.connection.on('error', err =>
 console.log(
   err.message,
-  ' is Mongod ont running?/Problem with Atlas Connection?'
+  ' is Mongod not running?/Problem with Atlas Connection?'
   )
 )
 
