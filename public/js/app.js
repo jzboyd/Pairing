@@ -63,82 +63,86 @@ class App extends React.Component {
 
   render = () => {
     return (
-      <div>
-      <h2>Create Podcast</h2>
+      <div id="app">
+      <hr/>
+      <h2 id="subtitle">Add a Podcast</h2>
       <form onSubmit={this.handleSubmit}>
-      <label htmlFor="name">Name</label>
+      <label htmlFor="name"><p className="input">Name</p></label>
       <input type="text" id="name" onChange={this.handleChange} />
       <br />
-      <label htmlFor="image">Image</label>
+      <label htmlFor="image"><p className="input">Image</p></label>
       <input type="text" id="image" onChange={this.handleChange} />
       <br />
-      <label htmlFor="category">Category</label>
+      <label htmlFor="category"><p className="input">Category</p></label>
       <input type="text" id="category" onChange={this.handleChange} />
       <br />
-      <label htmlFor="description">Description</label>
+      <label htmlFor="description"><p className="input">Description</p></label>
       <input type="text" id="description" onChange={this.handleChange} />
-      <br />
-      <input type="submit" value="update Podcast" />
+      <br /><br />
+      <input id="updatebtn" type="submit" value="Update Podcast" />
       </form>
-    <h2>List of Podcasts</h2>
-    <ul>
-    {this.state.podcasts.map((podcast) => {
-        return(
-          <li>
-          {podcast.name}
-          <br />
+    <h2 id="list">List of Great Podcasts</h2>
+      <div id="podcastlist">
+        <ul>
+        {this.state.podcasts.map((podcast) => {
+            return(
+              <li>
+              <p id="podname">{podcast.name}</p>
+              <br />
 
-          {podcast.category}
-          <br />
+              <p id="podcat">{podcast.category}</p>
+              <br />
 
-          {podcast.description}
-          <br />
+              <p id="poddesc">{podcast.description}</p>
+              <br />
 
-          <img src={podcast.image} alt={podcast.name} />
-          <button value={podcast._id} onClick={this.deletePodcast}>DELETE</button>
-          <details>
-          <summary>Edit this podcast</summary>
-          <form id={podcast._id} onSubmit={this.updatePodcast}>
-          <label htmlFor="name">Name</label>
-          <br />
-          <input
-          type="text"
-          id="name"
-          onChange={this.handleChange}
-          />
-          <br />
-          <label htmlFor="image">Image</label>
-          <br />
-          <input
-          type="text"
-          id="image"
-          onChange={this.handleChange}
-          />
-          <br />
-          <label htmlFor="category">Category</label>
-          <br />
-          <input
-          type="text"
-          id="category"
-          onChange={this.handleChange}
-          />
-          <br />
-          <label htmlFor="description">Description</label>
-          <br />
-          <input
-          type="text"
-          id="description"
-          onChange={this.handleChange}
-          />
-          <br />
-          <input type="submit" value="update Podcast" />
-          </form>
-          </details>
-          </li>
+              <img src={podcast.image} alt={podcast.name} />
+              <br/>
+              <button value={podcast._id} onClick={this.deletePodcast}>DELETE</button>
+              <br/><br/>
+              <details>
+              <summary>Edit this podcast</summary>
+              <form id={podcast._id} onSubmit={this.updatePodcast}>
+              <label htmlFor="name">Name</label>
+              <br />
+              <input
+              type="text"
+              id="name"
+              onChange={this.handleChange}
+              />
+              <br />
+              <label htmlFor="image">Image</label>
+              <br />
+              <input
+              type="text"
+              id="image"
+              onChange={this.handleChange}
+              />
+              <br />
+              <label htmlFor="category">Category</label>
+              <br />
+              <input
+              type="text"
+              id="category"
+              onChange={this.handleChange}
+              />
+              <br />
+              <label htmlFor="description">Description</label>
+              <br />
+              <input
+              type="text"
+              id="description"
+              onChange={this.handleChange}
+              />
+              <br /><br />
+              <input id="updatebtn" type="submit" value="Update Podcast" />
+              </form>
+              </details>
+              </li>
         )
-
       })}
       </ul>
+      </div>
       </div>
     )
   }

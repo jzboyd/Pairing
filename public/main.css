@@ -1,0 +1,112 @@
+body {
+  background-color: linen;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 80%;
+}
+
+img {
+  width: 15em;
+  height: 15em;
+}
+
+#title {
+  font-family: 'Montserrat'
+}
+
+#subtitle {
+  font-family: 'Montserrat';
+  font-size: 1.2em;
+}
+
+#name {
+  margin-left: 5em;
+}
+
+#image {
+  margin-left: 4.9em;
+}
+
+#category {
+  margin-left: 3.38em;
+}
+
+#description {
+  margin-left: 2.2em;
+}
+
+#updatebtn {
+  margin-left: 10.5em;
+  border-radius: 10px;
+  background-color: darkcyan;
+  color: linen;
+  font-family: arial;
+}
+
+.input {
+  font-family: arial;
+  margin-right: .5em;
+  margin-bottom: .5em;
+  display: inline;
+}
+
+hr {
+  margin-top: -.5em;
+  border-color: azure;
+}
+
+#podcastlist {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  font-family: arial;
+}
+
+#list {
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+
+#podname {
+  font-family: arial;
+  margin-bottom: 2px;
+  font-size: 2rem;
+}
+
+#podcat {
+  font-family: arial;
+  margin: 0 auto 2px 1em;
+  font-size: 1.2em;
+}
+
+#poddesc {
+  font-family: arial;
+  margin: 0 auto 2px 1em;
+}
+
+img {
+  border: 4px darkcyan solid;
+}
+
+#logo {
+  border: none;
+  height: 5em;
+  width: 15em;
+}
+
+button {
+  border-radius: 10px;
+  background-color: darkcyan;
+  color: linen;
+  font-family: arial;
+
+}
