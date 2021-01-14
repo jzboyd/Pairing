@@ -79,7 +79,7 @@ class App extends React.Component {
       <label htmlFor="description"><p className="input">Description</p></label>
       <input type="text" id="description" onChange={this.handleChange} />
       <br /><br />
-      <input id="updatebtn" type="submit" value="Update Podcast" />
+      <input id="updatebtn" type="submit" value="Add A Podcast" />
       </form>
     <h2 id="list">List of Great Podcasts</h2>
       <div id="podcastlist">
